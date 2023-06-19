@@ -26,11 +26,6 @@ const AboutUs = () => {
       observer.observe(aboutRef.current);
     }
 
-    return () => {
-      if (aboutRef.current) {
-        observer.unobserve(aboutRef.current);
-      }
-    };
   }, []);
 
   const handleContactButtonClick = () => {

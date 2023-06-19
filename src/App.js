@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { ToastContainer, toast, Slide } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Personaltrainer from './components/Personaltrainer';
 import ExploreSection from './components/ExploreSection';
@@ -8,14 +8,10 @@ import VillaRentals from './components/VillaRentals';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Transportation from './components/transportation';
-import Privatechef from './components/PrivateChef';
 import OtherServicesPage from './components/OtherServicesPage';
 import AboutUs from './components/AboutUs';
 
-// Custom CloseButton component
-const CloseButton = () => (
-  <button className="close-button">Close</button>
-);
+
 
 function App() {
   const [showScrollButton, setShowScrollButton] = useState(false);
