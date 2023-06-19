@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { ToastContainer, toast, Slide } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Personaltrainer from './components/Personaltrainer';
 import ExploreSection from './components/ExploreSection';
 import VillaRentals from './components/VillaRentals';
@@ -8,8 +10,12 @@ import Footer from './components/Footer';
 import Transportation from './components/transportation';
 import Privatechef from './components/PrivateChef';
 import OtherServicesPage from './components/OtherServicesPage';
+import AboutUs from './components/AboutUs';
 
-
+// Custom CloseButton component
+const CloseButton = () => (
+  <button className="close-button">Close</button>
+);
 
 function App() {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -41,24 +47,39 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    toast.info('Summer Offer! Free Transportation to the Villa from the arrival station. Book yours now!', {
+      position: toast.POSITION.TOP_RIGHT,
+      autoClose: 5000, // Display duration in milliseconds
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      className: 'custom-toast', // Add the custom toast class here
+      bodyClassName: 'custom-toast-body', // Add the custom toast body class here
+      closeButton: false, // Disable the close button
+    });
+    
+  }, []);
+
   return (
     <div>
       <Header />
+      <AboutUs />
       <div className="container">
-        <ExploreSection />
         <VillaRentals />
+        <ExploreSection />
         <Transportation />
         <Personaltrainer />
-       
         <OtherServicesPage />
         <Footer />
-        <button className={`scroll-button ${showScrollButton ? 'show' : ''}`}
-          onClick={scrollToTop}
-        >
+        <button className={`scroll-button ${showScrollButton ? 'show' : ''}`} onClick={scrollToTop}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2L3 13h9v9l9-11h-9z" />
           </svg>
         </button>
+        <ToastContainer />
       </div>
     </div>
   );

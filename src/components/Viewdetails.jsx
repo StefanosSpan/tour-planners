@@ -27,8 +27,7 @@ const ViewDetails = ({ bgUrl, title, area, price, onClose, bookNowButton, photos
 
   return (
     <div className={`details-overlay${fullscreen ? ' fullscreen' : ''}`}>
-      <div className="details">
-        
+      <div className="details" style={{ backgroundImage: `url(${bgUrl})` }}>
         <Carousel
           showArrows={!fullscreen}
           showThumbs={false}
@@ -45,9 +44,11 @@ const ViewDetails = ({ bgUrl, title, area, price, onClose, bookNowButton, photos
           ))}
         </Carousel>
         <div className="details-info">
-          <h6>{title}</h6>
-          <p>{area}</p>
-          <p>{price}</p>
+          <div className="blur-block">
+            <h6>{title}</h6>
+            <p>{area}</p>
+            <p>{price}</p>
+          </div>
           {/* Add other details like description, etc. */}
         </div>
         {bookNowButton}

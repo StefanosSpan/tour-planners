@@ -4,7 +4,6 @@ import menu from '../assets/menu.svg';
 import ContactForm from '../components/contactform';
 import bgImage from '../assets/bg/bg.png';
 import bgImage3 from '../assets/bg/bg3.png';
-
 import bgImage2 from '../assets/bg/bg2.png';
 import bgImage4 from '../assets/bg/bg4.png';
 import bgImage5 from '../assets/bg/bg5.png';
@@ -12,7 +11,6 @@ import bgImage6 from '../assets/bg/bg6.png';
 import bgImage7 from '../assets/bg/bg7.png';
 import bgImage8 from '../assets/bg/bg8.png';
 import bgImage9 from '../assets/bg/bg9.png';
-
 
 const Header = () => {
   const [showContactForm, setShowContactForm] = useState(false);
@@ -26,13 +24,12 @@ const Header = () => {
     setShowContactForm(false);
   };
 
-const bgImages = [
-    bgImage, bgImage3, bgImage2, bgImage4 ,bgImage5 ,bgImage6 ,bgImage7,bgImage8,bgImage9,
+  const bgImages = [
+    bgImage, bgImage3, bgImage2, bgImage4, bgImage5, bgImage6, bgImage7, bgImage8, bgImage9,
   ];
 
   useEffect(() => {
-    const interval = setInterval(changeBackground, 3000);
-
+    const interval = setInterval(changeBackground, 3500);
     return () => clearInterval(interval);
   }, []);
 
@@ -41,14 +38,13 @@ const bgImages = [
   };
 
   return (
-    <header style={{ backgroundImage: `url(${bgImages[currentBgIndex]})` }}>
+    <header className="sticky-nav" style={{ backgroundImage: `url(${bgImages[currentBgIndex]})` }}>
       <nav>
         <img id="logo" src={logo} alt="Tour Planners Logo" />
         <div id="links" className="links">
           <a href="#explore">Boat Rentals</a>
           <a href="#villarentals">Villa Rentals</a>
           <a href="#transportation">Transportation Services</a>
-          
           <a href="#Personaltrainer">Personal Trainer & Chef</a>
           <a href="#OtherServices">Other Services</a>
         </div>

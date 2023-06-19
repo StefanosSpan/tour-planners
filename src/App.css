@@ -17,10 +17,18 @@ header {
   display: flex;
   flex-direction: column;
   transition: all 0.5s ease-in-out;
-  margin-bottom: 100px;
   overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .section {
   margin-top: 40px;
@@ -28,6 +36,18 @@ header {
   background-color: #00000000;
   border-radius: 5px;
   text-align: center;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .section h2 {
@@ -43,9 +63,7 @@ header {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-
 /* Additional styling specific to your content within the section */
-
 
 header::before {
   content: '';
@@ -72,12 +90,22 @@ nav {
   left: 0;
   width: 90vw;
   z-index: 10;
-  
+  animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 #logo {
   width: 12%;
-  
 }
 
 #menu {
@@ -100,6 +128,7 @@ a {
   border: 1px solid white;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   font-size: 14px; /* Adjust the font size as per your desired size */
+  animation: fadeIn 1s ease-in-out;
 }
 
 a:hover {
@@ -113,6 +142,7 @@ a:focus {
   outline: none;
   box-shadow: 0 0 0 2px white;
 }
+
 
 
 
@@ -142,7 +172,20 @@ h1 {
   margin-bottom: 2rem;
   line-height: 110%;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-in-out;
 }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 h3 {
   font-family: 'Ubuntu', sans-serif;
@@ -155,6 +198,18 @@ h3 {
   width: 60%;
   text-align: center;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
@@ -236,10 +291,10 @@ label {
 }
 
 .container {
-  width: 87%;
+  width: 88%;
   margin: auto;
   position: relative;
-  background-color: #00000052;
+  background-color: #00000024;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -249,7 +304,7 @@ label {
 
 #explore,
 #villarentals {
-  height: 85vh;
+  height: 80vh;
   margin-top: 4rem;
   flex-direction: column;
   gap: 2rem;
@@ -262,7 +317,7 @@ h2 {
   text-align: center;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  color: #ececec;
+  color: #434343;
 }
 
 
@@ -288,7 +343,30 @@ h5 {
   height: 65vh;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
+
+.card-container.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.card.show {
+  transform: scale(1);
+}
+
+.card-container.hovered .card {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-container.hovered .info-panel {
+  transform: translate(5%, -50%) scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
 
 .card {
   width: inherit;
@@ -298,8 +376,17 @@ h5 {
   border-radius: 25px;
   transition: transform 0.3s ease-in-out;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  animation: scaleCard 0.3s ease-in-out;
 }
 
+@keyframes scaleCard {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 
 .card:hover {
   transform: scale(1.05);
@@ -323,6 +410,13 @@ h5 {
   gap: 2rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
+  animation: slideInfoPanel 0.3s ease-in-out;
+}
+
+@keyframes slideInfoPanel {
+  from {
+    transform: translateX(-100%);
+  }
 }
 
 .info-panel:hover {
@@ -379,7 +473,7 @@ h5 {
 }
 
 #villarentals {
-  height: 200vh;
+  height: 190vh;
 }
 
 footer {
@@ -390,11 +484,12 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #f0f0f0;
+  background-color: #f0f0f000;
 }
 
 footer p {
   font-size: 1.5rem;
+  color: white;
 }
 
 footer #logo {
@@ -403,13 +498,18 @@ footer #logo {
 }
 
 footer a {
-  color: black;
+  color: rgb(255, 255, 255);
   margin-right: 16rem;
   font-weight: 500;
+
 }
 
 footer .btn {
   border: 3px solid black;
+}
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1625px) {
@@ -419,15 +519,15 @@ footer .btn {
     background-size: cover;
     width: 100vw;
   }
-
+ 
   h1 {
-    font-size: 8rem;
+    font-size: 7rem;
     width: 100%;
   }
 
   .links a {
     margin-right: 3rem;
-    margin-top: 1rem;
+    margin-top: -2rem;
     font-size: 13px;
     
   }
@@ -439,7 +539,10 @@ footer .btn {
     font-size: 6rem;
     width: 100%;
   }
-
+  .content-wrapper {
+    display: block;
+    flex-wrap: wrap;
+   }
   .links a {
     margin-right: 3rem;
     margin-top: 1rem;
@@ -459,6 +562,11 @@ footer .btn {
     font-size: 1.25rem;
     font-weight: normal;
   }
+
+  .content-wrapper {
+    
+    flex-wrap: wrap;
+   }
 
   a {
     margin: 0;
@@ -506,6 +614,10 @@ footer .btn {
     }
   }
   
+  .content-wrapper {
+    
+    flex-wrap: wrap;
+   }
   
   #menu {
     display: inline;
@@ -515,12 +627,7 @@ footer .btn {
     width: 50%;
   }
 
-  .form-container,
-  .card-gallery {
-    flex-direction: column;
-    padding: 2rem 0.5rem;
-    gap: 0.5rem;
-  }
+  
 
   .form-input,
   .btn-search {
@@ -533,7 +640,7 @@ footer .btn {
   }
 
   .card {
-    height: 19rem;
+    height: 20rem;
   }
 
   .info-panel {
@@ -572,16 +679,20 @@ footer .btn {
   }
 
   #explore {
-    height: 10vh;
+    height: 70vh;
 
   }
 
   #transportation {
-    height: 200vh;
+    height: 130vh;
   }
 
   #villarentals {
-    height: 200vh;
+    height: 180vh;
+  }
+
+  #Personaltrainer {
+    height: 70vh;
   }
 
   footer {
@@ -622,27 +733,52 @@ footer .btn {
   footer #logo {
     height: 100%;
   }
+  .form-container,
+  .card-gallery {
+    flex-direction: column;
+    padding: 2rem 0.5rem;
+    gap: 0.5rem;
+  }
+
 }
+
+.content-wrapper {
+    
+  flex-wrap: wrap;
+ }
 
 @media screen and (max-width: 550px) {
   #villarentals {
     height: 325vh;
   }
 }
+
+.content-wrapper {
+    
+  flex-wrap: wrap;
+ }
+
 @media screen and (max-width: 480px) {
   #explore {
     height: 140vh;
   }
   #villarentals {
-    height: 260vh;
+    height: 370vh;
   }
   #transportation {
     height: 260vh;
   }
+  .content-wrapper {
+    
+    flex-wrap: wrap;
+   }
   .card-gallery {
       width: 85vw;
       height: 120vh;
-      gap: 5rem;
+     
+  }
+  .container {
+    width: 100%;
   }
 }
 
@@ -888,12 +1024,21 @@ textarea {
   .details {
     max-width: 80%; /* Adjust the max-width as per your requirements */
   }
+  .content-wrapper {
+    
+    flex-wrap: wrap;
 }
+}
+
 
 @media (max-height: 600px) {
   .details {
     max-height: 70%; /* Adjust the max-height as per your requirements */
   }
+  .content-wrapper {
+    
+    flex-wrap: wrap;
+}
 }
 
 .photo-gallery {
@@ -1079,5 +1224,154 @@ h6 {
   font-weight: bold;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+.about-us h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #434343;
+}
+
+.about-us p {
+  font-size: 18px;
+  color: #434343;
+}
+
+/* Custom toast styles */
+.custom-toast .Toastify__toast {
+  background: #333;
+  color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.custom-toast .Toastify__toast-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.custom-toast .Toastify__close-button {
+  color: #fff;
+  font-size: 16px;
+}
+
+.custom-toast .Toastify__toast--error {
+  background: #ff4136;
+}
+
+.custom-toast .Toastify__toast--success {
+  background: #2ecc40;
+}
+
+.custom-toast .Toastify__toast--warning {
+  background: #ff851b;
+}
+
+.hover-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  border-radius: 22px;
+}
+
+.hover-form:hover {
+  opacity: 1;
+}
+
+.hover-form p {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+.hover-form p span {
+  font-weight: bold;
+}
+
+.about-us {
+  padding: 30px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.about-us.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+.text-content {
+  flex-basis: 60%;
+  padding-right: 20px;
+}
+
+.services {
+  flex-basis: 40%;
+  background-color: #33435fa2;
+  padding: 20px;
+  margin-top: 20px;
+  color: #fff;
+  border-radius: 10px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.services:hover {
+  background-color: #33435f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.services h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #eae8e8;
+}
+
+.services ul {
+  list-style-type: none;
+  padding: 50px;
+}
+
+.services li {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.contact-button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button:hover {
+  background-color: #333;
 }
 
