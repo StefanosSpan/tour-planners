@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0"
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.0"
   }
 }
