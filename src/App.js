@@ -71,6 +71,7 @@ function App() {
         <Personaltrainer />
         <OtherServicesPage />
         <Footer />
+        <ToastContainer />
         <button className={`scroll-button ${showScrollButton ? 'show' : ''}`} onClick={scrollToTop}>
   <img src={arrow} style={{ width: '20px', height: '20px' }} alt="Scroll to Top" />
 </button>

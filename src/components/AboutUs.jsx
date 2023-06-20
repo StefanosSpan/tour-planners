@@ -37,7 +37,7 @@ const AboutUs = () => {
   };
 
   return (
-    <section className="about-us" ref={aboutRef}>
+    <section id="AboutUs" className="about-us" ref={aboutRef}>
       <div className="content-wrapper">
         <div className="text-content">
           <h2>About Us</h2>
@@ -59,11 +59,11 @@ const AboutUs = () => {
         <section className="services">
           <h2>Services</h2>
           <ul>
-            <li>Villa rentals</li>
-            <li>Boat rentals</li>
-            <li>Transportation services</li>
+            <li>Villa Rentals</li>
+            <li>Boat Rentals</li>
+            <li>Transportation Services</li>
             <li>Personal Trainer & Chef</li>
-            <li>Restaurant Booking</li>
+            <li>Concierge Servicers</li>
             {/* Add more services as needed */}
           </ul>
         </section>

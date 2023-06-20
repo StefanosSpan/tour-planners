@@ -211,7 +211,7 @@ const VillaRentals = () => {
               fontSize: '18px',
               fontWeight: 'bold',
             }}>
-               Price Per Week: <br/> January-March: 4.800€ | April:5200€ | May:6400€ | June:7650€ | July-August:8750€ | September:7850€ | October:6500€ | November-December:5.200€
+               Price Per Week: <br/> June:8000€ | July-August:9500€ | September:8000€ 
             </div>
           }
           photos={[thyrsus1, thyrsus2, thyrsus3, thyrsus4, thyrsus5, thyrsus6, thyrsus7, thyrsus8, thyrsus9]} // Add an array of photos

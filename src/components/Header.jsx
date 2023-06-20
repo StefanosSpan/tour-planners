@@ -44,11 +44,13 @@ const Header = () => {
       <nav>
         <img id="logo" src={logo} alt="Tour Planners Logo" />
         <div id="links" className="links">
+        <a href="#AboutUs">About Us</a>
           <a href="#explore">Boat Rentals</a>
+          
           <a href="#villarentals">Villa Rentals</a>
           <a href="#transportation">Transportation Services</a>
           <a href="#Personaltrainer">Personal Trainer & Chef</a>
-          <a href="#OtherServices">Other Services</a>
+          
         </div>
         <img onClick={toggleMenu} id="menu" src={menu} alt="mobile menu" />
       </nav>
