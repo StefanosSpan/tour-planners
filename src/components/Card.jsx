@@ -67,7 +67,7 @@ const Card = ({ bgUrl, title, area, price, photos }) => {
       >
         {isHovered && (
           <div className="hover-form">
-            <p>From {price}</p>
+            <p>{price}</p>
           </div>
         )}
       </div>

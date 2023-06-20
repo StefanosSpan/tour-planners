@@ -172,15 +172,32 @@ const VillaRentals = () => {
         />
         <Card
           bgUrl={meliades1}
-          title="Villa Meliades - Chania ("
+          title="Villa Meliades - Chania (Guests 5)"
+          area={
+            <div style={{ 
+              background: 'lightgray',
+              padding: '10px',
+              borderRadius: '5px',
+            }}>
+              Discover the enchanting Meliades Villas, nestled amidst the serene Agia Marina area, a mere 2 km from the captivating sandy beach. Immerse yourself in the tranquility of lush olive groves as you indulge in our spacious villas, each complete with a private pool and every amenity you desire.
+<br/>
+Step into a world of modern elegance as our air-conditioned villas welcome you with stylish furnishings and the allure of a balcony and patio that open up to a beautiful garden. Inside, you'll find a fully equipped kitchen with a dining area, a cozy living room boasting a fireplace, and 2 or 3 inviting bedrooms. For your convenience, we provide a flat-screen satellite TV, a hairdryer, and a washing machine, ensuring your stay is nothing short of extraordinary.
+<br/>
+Situated a mere 2 km away lies the vibrant coastal hub of Platanias, while the charming Venetian port town of Chania beckons just 13 km away. With complimentary Wi-Fi throughout and the convenience of free private parking, Meliades Villas ensures your utmost comfort and connectivity.
+<br/>
+Immerse yourself in the epitome of relaxation, surrounded by nature's beauty, at Meliades Villas—a sanctuary where your dream vacation becomes a reality.
+            </div>}
           price={
             <div style={{
               marginTop: '10px',
               fontSize: '18px',
               fontWeight: 'bold',
             }}>
-              1300€/day
+              Price Per Day :
+              <br/>
+              200€
             </div>
+            
           }
           photos={[
             meliades1, meliades2, meliades3, meliades4, meliades5, meliades6, meliades7, meliades8, meliades9, meliades10,
