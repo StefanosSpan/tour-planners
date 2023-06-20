@@ -454,6 +454,13 @@ footer .btn {
     font-size: 13px;
     
   }
+  .carousel .slide img {
+    width: 60% !important;
+   }
+   
+   .carousel img {
+     width: 60% !important;
+   }
 }
 
 @media screen and (max-width: 1100px) {
@@ -947,9 +954,7 @@ textarea {
 
 
 @media (max-width: 600px) {
-  .details {
-    max-width: 80%; /* Adjust the max-width as per your requirements */
-  }
+  
   .content-wrapper {
     
     flex-wrap: wrap;
@@ -957,13 +962,21 @@ textarea {
 h2 {
   font-size: 2.2rem;
 }
+.carousel .slide img {
+  width: 100% !important;
+ }
+ 
+ .carousel img {
+   width: 100% !important;
+ }
+ .details {
+  position: initial;
+ }
 }
 
 
 @media (max-height: 600px) {
-  .details {
-    max-height: 70%; /* Adjust the max-height as per your requirements */
-  }
+  
   .content-wrapper {
     
     flex-wrap: wrap;
@@ -1140,13 +1153,7 @@ h2 {
   z-index: 9999;
 }
 
-.carousel .slide img {
- width: 60% !important;
-}
 
-.carousel img {
-  width: 60% !important;
-}
 
 h6 {
   font-size: 1.5rem;
