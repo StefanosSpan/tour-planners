@@ -49,7 +49,7 @@ function App() {
       autoClose: 5000, // Display duration in milliseconds
       hideProgressBar: true,
       closeOnClick: true,
-      pauseOnHover: false,
+      pauseOnHover: true,
       draggable: true,
       progress: undefined,
       className: 'custom-toast', // Add the custom toast class here
@@ -75,7 +75,7 @@ function App() {
             <path d="M12 2L3 13h9v9l9-11h-9z" />
           </svg>
         </button>
-        <ToastContainer />
+        
       </div>
     </div>
   );
