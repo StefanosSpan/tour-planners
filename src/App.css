@@ -683,10 +683,13 @@ footer .btn {
 
 @media screen and (max-width: 480px) {
   #explore {
-    height: 140vh;
+    height: 130vh;
   }
   #villarentals {
-    height: 370vh;
+    height: 350vh;
+  }
+  #Personaltrainer {
+    height: 130vh;
   }
   #transportation {
     height: 260vh;
@@ -951,6 +954,9 @@ textarea {
     
     flex-wrap: wrap;
 }
+h2 {
+  font-size: 2.2rem;
+}
 }
 
 
@@ -1065,7 +1071,7 @@ textarea {
 .scroll-button {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 30px;
   display: none;
   padding: 10px;
   border: none;

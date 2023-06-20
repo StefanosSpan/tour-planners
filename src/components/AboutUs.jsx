@@ -9,7 +9,7 @@ const AboutUs = () => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5, // Adjust the threshold value as needed
+      threshold: 0.001, // Adjust the threshold value as needed
     };
 
     const observer = new IntersectionObserver((entries) => {

@@ -11,6 +11,8 @@ import bgImage6 from '../assets/bg/bg6.png';
 import bgImage7 from '../assets/bg/bg7.png';
 import bgImage8 from '../assets/bg/bg8.png';
 import bgImage9 from '../assets/bg/bg9.png';
+import LazyLoad from 'react-lazyload';
+
 
 const Header = () => {
   const [showContactForm, setShowContactForm] = useState(false);
@@ -29,7 +31,7 @@ const Header = () => {
   ];
 
   useEffect(() => {
-    const interval = setInterval(changeBackground, 3500);
+    const interval = setInterval(changeBackground, 7500);
     return () => clearInterval(interval);
   }, []);
 
