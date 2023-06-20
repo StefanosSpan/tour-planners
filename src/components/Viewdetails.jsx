@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const ViewDetails = ({ bgUrl, title, area, price, onClose, bookNowButton, photos }) => {
   const [fullscreen, setFullscreen] = useState(false);
   const [fullscreenIndex, setFullscreenIndex] = useState(0);
+  const [touchStartX, setTouchStartX] = useState(null);
 
   const toggleFullscreen = (index) => {
     setFullscreen(!fullscreen);
@@ -16,14 +17,51 @@ const ViewDetails = ({ bgUrl, title, area, price, onClose, bookNowButton, photos
   };
 
   const handleFullscreenNext = () => {
-    const nextIndex = (fullscreenIndex + 1) % photos.length;
-    setFullscreenIndex(nextIndex);
+    setFullscreenIndex((prevIndex) => (prevIndex + 1) % photos.length);
   };
 
   const handleFullscreenPrev = () => {
-    const prevIndex = (fullscreenIndex - 1 + photos.length) % photos.length;
-    setFullscreenIndex(prevIndex);
+    setFullscreenIndex((prevIndex) => (prevIndex - 1 + photos.length) % photos.length);
   };
+
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    if (touchStartX !== null) {
+      const touchEndX = e.touches[0].clientX;
+      const deltaX = touchEndX - touchStartX;
+      if (deltaX > 50) {
+        handleFullscreenPrev();
+      } else if (deltaX < -50) {
+        handleFullscreenNext();
+      }
+      setTouchStartX(null);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (fullscreen) {
+      if (e.key === 'ArrowLeft') {
+        // Left arrow key
+        handleFullscreenPrev();
+      } else if (e.key === 'ArrowRight') {
+        // Right arrow key
+        handleFullscreenNext();
+      } else if (e.key === 'Escape') {
+        // Escape key
+        closeFullscreen();
+      }
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [fullscreen]);
 
   return (
     <div className={`details-overlay${fullscreen ? ' fullscreen' : ''}`}>
@@ -36,10 +74,18 @@ const ViewDetails = ({ bgUrl, title, area, price, onClose, bookNowButton, photos
           infiniteLoop
           selectedItem={fullscreenIndex}
           onClickItem={toggleFullscreen}
+          onChange={(index) => setFullscreenIndex(index)}
+          swipeable={!fullscreen}
+          emulateTouch // Enable touch swipe
         >
           {photos.map((photo, index) => (
             <div key={index} onClick={() => toggleFullscreen(index)}>
-              <img src={photo} alt={`Photo ${index + 1}`} />
+              <img
+                src={photo}
+                alt={`Photo ${index + 1}`}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+              />
             </div>
           ))}
         </Carousel>
