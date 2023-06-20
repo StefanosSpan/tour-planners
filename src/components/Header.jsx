@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import logo from '../assets/logo-white.png';
 import menu from '../assets/menu.svg';
 import ContactForm from '../components/contactform';
-import bgImage from '../assets/bg/bg.png';
-import bgImage3 from '../assets/bg/bg3.png';
-import bgImage2 from '../assets/bg/bg2.png';
-import bgImage4 from '../assets/bg/bg4.png';
-import bgImage5 from '../assets/bg/bg5.png';
-import bgImage6 from '../assets/bg/bg6.png';
-import bgImage7 from '../assets/bg/bg7.png';
-import bgImage8 from '../assets/bg/bg8.png';
-import bgImage9 from '../assets/bg/bg9.png';
+import bgImage from '../assets/bg/bg.jpeg';
+import bgImage3 from '../assets/bg/bg3.webp';
+import bgImage2 from '../assets/bg/bg2.webp';
+import bgImage4 from '../assets/bg/bg4.webp';
+import bgImage5 from '../assets/bg/bg5.webp';
+import bgImage6 from '../assets/bg/bg6.webp';
+import bgImage7 from '../assets/bg/bg7.webp';
+import bgImage8 from '../assets/bg/bg8.webp';
+import bgImage9 from '../assets/bg/bg9.jpeg';
 import LazyLoad from 'react-lazyload';
 
 
