@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ContactForm = ({ onClose, defaultSubject }) => {
+  const [phone, setPhone] = useState('');
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -21,6 +23,7 @@ const ContactForm = ({ onClose, defaultSubject }) => {
       checkOut,
       message,
       subject,
+      phone, // Include the phone field in the payload
     };
 
     try {
@@ -50,44 +53,65 @@ const ContactForm = ({ onClose, defaultSubject }) => {
 
   return (
     <div className="contact-form-overlay">
-      <div className="contact-form">
-        <h2 style={{ color: 'white' }}>Contact us for Booking</h2>
+      <div className="contact-form" style={{ maxWidth: '900px', height: '700px', alignItems: 'center', margin: '0 auto' }}>
+        <h2 style={{ color: 'white' }}>Booking Request</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name" style={{ color: 'white' }}>
               Name
             </label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="name" name="name" required style={{ fontSize: '14px', padding: '5px' }} />
           </div>
           <div className="form-group">
             <label htmlFor="email" style={{ color: 'white' }}>
               Email
             </label>
-            <input type="email" id="email" name="email" required />
+            <input type="email" id="email" name="email" required style={{ fontSize: '14px', padding: '5px' }} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="phone" style={{ color: 'white' }}>
+              Phone
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+              style={{ backgroundColor: 'white', fontSize: '14px', padding: '5px' }}
+            />
           </div>
           <div className="form-group">
             <label htmlFor="checkIn" style={{ color: 'white' }}>
               Check-in
             </label>
-            <input type="date" id="checkIn" name="checkIn" style={{ backgroundColor: 'white' }} required />
+            <input type="date" id="checkIn" name="checkIn" style={{ backgroundColor: 'white', fontSize: '14px', padding: '5px' }} required />
           </div>
           <div className="form-group">
             <label htmlFor="checkOut" style={{ color: 'white' }}>
               Check-out
             </label>
-            <input type="date" id="checkOut" name="checkOut" style={{ backgroundColor: 'white' }} required />
+            <input type="date" id="checkOut" name="checkOut" style={{ backgroundColor: 'white', fontSize: '14px', padding: '5px' }} required />
           </div>
           <div className="form-group">
             <label htmlFor="subject" style={{ color: 'white' }}>
               Subject
             </label>
-            <input type="text" id="subject" name="subject" defaultValue={`${defaultSubject} - Rental Inquiry`} style={{ backgroundColor: 'white' }} required />
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              defaultValue={`${defaultSubject} - Rental Inquiry`}
+              style={{ backgroundColor: 'white', fontSize: '14px', padding: '5px' }}
+              required
+            />
           </div>
           <div className="form-group">
             <label htmlFor="message" style={{ color: 'white' }}>
               Message
             </label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" required style={{ fontSize: '14px', padding: '5px', height: '70px', resize: 'vertical' }}></textarea>
           </div>
           <div className="form-actions">
             <button type="submit" className="btn btn-primary">

@@ -781,6 +781,7 @@ footer .btn {
   width: 400px;
   position: relative;
   z-index: 99999;
+  margin-top: 0px;
 }
 
 .contact-form-close {

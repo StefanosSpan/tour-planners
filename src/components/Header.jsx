@@ -59,7 +59,7 @@ const Header = () => {
         <section>
           <h4>Contact Us for Special Rental Packs</h4>
           <p>
-            Get in touch with us to create a custom rental package that includes boat rental, villa rental, transportation to the villa from the arrival station, and extra services.
+            Get in touch with us to create a custom rental package that includes villa rental, boat rental, transportation to the villa from the arrival station, and extra services.
           </p>
         </section>
       </div>
