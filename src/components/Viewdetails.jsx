@@ -32,7 +32,7 @@ const ViewDetails = ({ bgUrl, title, area, price, onClose, bookNowButton, photos
           showArrows={!fullscreen}
           showThumbs={false}
           autoPlay={!fullscreen}
-          interval={1500}
+          interval={3000}
           infiniteLoop
           selectedItem={fullscreenIndex}
           onClickItem={toggleFullscreen}

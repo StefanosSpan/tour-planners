@@ -1,10 +1,14 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
+
+// Enable CORS for cross-origin requests
+app.use(cors());
 
 // Define the POST endpoint for sending emails
 app.post('/api/send-email', (req, res) => {
@@ -18,14 +22,14 @@ app.post('/api/send-email', (req, res) => {
     secure: false,
     auth: {
       user: 'spanoudakis.stf@gmail.com',
-      pass: 'nobodies2@',
+      pass: 'nobodies2',
     },
   });
 
   // Configure the email options
   const mailOptions = {
     from: 'spanoudakis.stf@gmail.com',
-    to: 'recipient@example.com',
+    to: 'spanoudakis.stf@gmail.com',
     subject: 'New Contact Form Submission',
     text: `
       Name: ${name}
@@ -47,6 +51,12 @@ app.post('/api/send-email', (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
+app.listen(PORT, (err) => {
+  if (err) {
+    console.error('Error starting the server:', err);
+  } else {
+    console.log(`Server listening on port ${PORT}`);
+  }
 });
+
+
