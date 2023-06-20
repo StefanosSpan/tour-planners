@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Transportation from './components/transportation';
 import OtherServicesPage from './components/OtherServicesPage';
 import AboutUs from './components/AboutUs';
+import arrow from './assets/arrowup.svg'
 
 
 
@@ -71,10 +72,9 @@ function App() {
         <OtherServicesPage />
         <Footer />
         <button className={`scroll-button ${showScrollButton ? 'show' : ''}`} onClick={scrollToTop}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2L3 13h9v9l9-11h-9z" />
-          </svg>
-        </button>
+  <img src={arrow} style={{ width: '20px', height: '20px' }} alt="Scroll to Top" />
+</button>
+
         
       </div>
     </div>
