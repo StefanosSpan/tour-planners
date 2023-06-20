@@ -53,7 +53,7 @@ const AboutUs = () => {
           <p>Contact us today to create a custom rental package that includes boat rental, villa rental, transportation to the villa from the arrival station, and any extra services you may require. We are here to assist you in 
             planning the perfect vacation on the beautiful island of Crete.</p>
           
-          <button className="contact-button" onClick={handleContactButtonClick}>Contact Us</button>
+        
         </div>
         
         <section className="services">
