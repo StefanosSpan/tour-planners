@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 
 const ContactForm = ({ onClose, defaultSubject }) => {
   const [phone, setPhone] = useState('');
@@ -49,7 +49,17 @@ const ContactForm = ({ onClose, defaultSubject }) => {
       console.error('Error sending email:', error);
       // Handle the error gracefully
     }
-  };
+  }
+
+  useEffect(() => {
+    // Add scroll lock when the component mounts
+    document.body.style.overflow = 'hidden';
+
+    // Cleanup the scroll lock when the component unmounts
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
 
   return (
     <div className="contact-form-overlay">

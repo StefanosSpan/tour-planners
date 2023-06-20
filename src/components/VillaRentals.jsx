@@ -74,6 +74,52 @@ import meliades40 from '../images/villa-meliades/40.jpeg';
 import meliades41 from '../images/villa-meliades/41.jpeg';
 import meliades42 from '../images/villa-meliades/42.jpeg';
 import meliades43 from '../images/villa-meliades/43.jpeg';
+import image1 from '../images/villa-akri/1.jpeg';
+import image2 from '../images/villa-akri/2.jpeg';
+import image3 from '../images/villa-akri/3.jpeg';
+import image4 from '../images/villa-akri/4.jpeg';
+import image5 from '../images/villa-akri/5.jpeg';
+import image6 from '../images/villa-akri/6.jpeg';
+import image7 from '../images/villa-akri/7.jpeg';
+import image8 from '../images/villa-akri/8.jpeg';
+import image9 from '../images/villa-akri/9.jpeg';
+import image10 from '../images/villa-akri/10.jpeg';
+import image11 from '../images/villa-akri/11.jpeg';
+import image12 from '../images/villa-akri/12.jpeg';
+import image13 from '../images/villa-akri/13.jpeg';
+import image14 from '../images/villa-akri/14.jpeg';
+import image15 from '../images/villa-akri/15.jpeg';
+import image16 from '../images/villa-akri/16.jpeg';
+import image17 from '../images/villa-akri/17.jpeg';
+import image18 from '../images/villa-akri/18.jpeg';
+import image19 from '../images/villa-akri/19.jpeg';
+import image20 from '../images/villa-akri/20.jpeg';
+import image21 from '../images/villa-akri/21.jpeg';
+import image22 from '../images/villa-akri/22.jpeg';
+import image23 from '../images/villa-akri/23.jpeg';
+import image24 from '../images/villa-akri/24.jpeg';
+import image25 from '../images/villa-akri/25.jpeg';
+import image26 from '../images/villa-akri/26.jpeg';
+import image27 from '../images/villa-akri/27.jpeg';
+import image28 from '../images/villa-akri/28.jpeg';
+import image29 from '../images/villa-akri/29.jpeg';
+import image30 from '../images/villa-akri/30.jpeg';
+import image31 from '../images/villa-akri/31.jpeg';
+import image32 from '../images/villa-akri/32.jpeg';
+import image33 from '../images/villa-akri/33.jpeg';
+import image34 from '../images/villa-akri/34.jpeg';
+import image35 from '../images/villa-akri/35.jpeg';
+import image36 from '../images/villa-akri/36.jpeg';
+import image37 from '../images/villa-akri/37.jpeg';
+import image38 from '../images/villa-akri/38.jpeg';
+import image39 from '../images/villa-akri/39.jpeg';
+import image40 from '../images/villa-akri/40.jpeg';
+import image42 from '../images/villa-akri/42.jpeg';
+import image43 from '../images/villa-akri/43.jpeg';
+import image44 from '../images/villa-akri/44.jpeg';
+import image45 from '../images/villa-akri/45.jpeg';
+import image46 from '../images/villa-akri/46.jpeg';
+
 
 // Add more imports if needed
 
@@ -212,18 +258,76 @@ Immerse yourself in the epitome of relaxation, surrounded by nature's beauty, at
       
       <div className="card-gallery">
         <Card
-          bgUrl={photo1}
-          title="Villa Kyma"
+          bgUrl={image1}
+          title="Villa Akri - Chania (Guests 8)"
+          area={
+            <div style={{ 
+              background: 'lightgray',
+              padding: '10px',
+              borderRadius: '5px',
+            }}>
+              Escape to a stunning villa in Chania, Crete, offering breathtaking views of the blue seas.<br/>
+               This tranquil retreat boasts a heated infinity pool, a hot tub, and magnificent sunsets.<br/>
+                With accommodation for up to 8 guests, it's ideal for families or friends seeking relaxation.<br/>
+                 Adults can unwind by the pool or enjoy outdoor dining by the BBQ, while kids can stay entertained with ping pong, table football, or PlayStation.<br/>
+                 Villa Akri, perched high on the cliffs near Chania, features luxurious en-suite bedrooms with sea views, a well-equipped kitchen, and a spacious living area.<br/>
+               Outside, landscaped gardens surround the solar-heated infinity pool and separate hot tub. Additional amenities include air conditioning, WiFi, and parking.<br/>
+                Experience a memorable holiday in this designer villa with exceptional comforts and panoramic vistas. License Number: *1042K91003273101.
+            </div>}
           price={
             <div style={{
               marginTop: '10px',
               fontSize: '18px',
               fontWeight: 'bold',
             }}>
-               Price Per Week: <br/> January-March: 4.800€ | April:5200€ | May:6400€ | June:7650€ | July-August:8750€ | September:7850€ | October:6500€ | November-December:5.200€
+               Price Per Week: <br/> June: 6800€ | July-August: 8500€ | September: 6800€
+               <br/> Price Per Day: <br/> June: 972€ | July-August: 1215€ | September: 972€ 
             </div>
           }
-          photos={[]} // Add an array of photos
+          photos = {[
+            image1,image2,image3,image4,image5,
+            image6,
+            image7,
+            image8,
+            image9,
+            image10,
+            image11,
+            image12,
+            image13,
+            image14,
+            image15,
+            image16,
+            image17,
+            image18,
+            image19,
+            image20,
+            image21,
+            image22,
+            image23,
+            image24,
+            image25,
+            image26,
+            image27,
+            image28,
+            image29,
+            image30,
+            image31,
+            image32,
+            image33,
+            image34,
+            image35,
+            image36,
+            image37,
+            image38,
+            image39,
+            image40,
+            image42,
+            image43,
+            image44,
+            image45,
+            image46
+          ]}
+           // Add an array of photos
         />
         <Card
           bgUrl={photo1}

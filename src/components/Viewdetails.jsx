@@ -57,6 +57,16 @@ const ViewDetails = ({ bgUrl, title, area, price, onClose, bookNowButton, photos
   };
 
   useEffect(() => {
+    // Add scroll lock when the component mounts
+    document.body.style.overflow = 'hidden';
+
+    // Cleanup the scroll lock when the component unmounts
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
+  useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
@@ -107,13 +117,13 @@ const ViewDetails = ({ bgUrl, title, area, price, onClose, bookNowButton, photos
           <button className="btn btn-close-fullscreen" onClick={closeFullscreen} style={{ color: 'red' }}>
             X
           </button>
+          <img src={photos[fullscreenIndex]} alt="Fullscreen" />
           <button className="btn btn-prev-fullscreen" onClick={handleFullscreenPrev} style={{ color: '#fff' }}>
             &lt;
           </button>
           <button className="btn btn-next-fullscreen" onClick={handleFullscreenNext} style={{ color: '#fff' }}>
             &gt;
           </button>
-          <img src={photos[fullscreenIndex]} alt="Fullscreen" />
         </div>
       )}
     </div>
