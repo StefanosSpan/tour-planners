@@ -683,13 +683,13 @@ footer .btn {
 
 @media screen and (max-width: 480px) {
   #explore {
-    height: 130vh;
+    height: 140vh;
   }
   #villarentals {
-    height: 350vh;
+    height: 360vh;
   }
   #Personaltrainer {
-    height: 130vh;
+    height: 140vh;
   }
   #transportation {
     height: 260vh;
