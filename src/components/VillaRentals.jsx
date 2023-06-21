@@ -119,6 +119,35 @@ import image43 from '../images/villa-akri/43.jpeg';
 import image44 from '../images/villa-akri/44.jpeg';
 import image45 from '../images/villa-akri/45.jpeg';
 import image46 from '../images/villa-akri/46.jpeg';
+import koko1 from '../images/villa kokomo/1.jpeg';
+import koko2 from '../images/villa kokomo/2.jpeg';
+import koko3 from '../images/villa kokomo/3.jpeg';
+import koko4 from '../images/villa kokomo/4.jpeg';
+import koko5 from '../images/villa kokomo/5.jpeg';
+import koko6 from '../images/villa kokomo/6.jpeg';
+import koko7 from '../images/villa kokomo/7.jpeg';
+import koko8 from '../images/villa kokomo/8.jpeg';
+import koko9 from '../images/villa kokomo/9.jpeg';
+import koko10 from '../images/villa kokomo/10.jpeg';
+import koko11 from '../images/villa kokomo/11.jpeg';
+import koko12 from '../images/villa kokomo/12.jpeg';
+import koko13 from '../images/villa kokomo/13.jpeg';
+import koko14 from '../images/villa kokomo/14.jpeg';
+import koko15 from '../images/villa kokomo/15.jpeg';
+import koko16 from '../images/villa kokomo/16.jpeg';
+import koko17 from '../images/villa kokomo/17.jpeg';
+import koko18 from '../images/villa kokomo/18.jpeg';
+import koko19 from '../images/villa kokomo/19.jpeg';
+import koko20 from '../images/villa kokomo/20.jpeg';
+import koko21 from '../images/villa kokomo/21.jpeg';
+import koko22 from '../images/villa kokomo/22.jpeg';
+import koko23 from '../images/villa kokomo/23.jpeg';
+import koko24 from '../images/villa kokomo/24.jpeg';
+import koko25 from '../images/villa kokomo/25.jpeg';
+import koko26 from '../images/villa kokomo/26.jpeg';
+import koko27 from '../images/villa kokomo/27.jpeg';
+import koko28 from '../images/villa kokomo/28.jpeg';
+import koko29 from '../images/villa kokomo/29.jpeg';
 
 
 // Add more imports if needed
@@ -165,6 +194,8 @@ const VillaRentals = () => {
             </div>
           }
           photos={[photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14]} // Add an array of photos
+        
+        
         />
         
         <Card
@@ -330,18 +361,31 @@ Immerse yourself in the epitome of relaxation, surrounded by nature's beauty, at
            // Add an array of photos
         />
         <Card
-          bgUrl={photo1}
-          title="Villa Kyma"
+          bgUrl={koko1}
+          title="Villa Kokomo - Chania (Guests 6)"
+          area={
+            <div style={{ 
+              background: 'lightgray',
+              padding: '10px',
+              borderRadius: '5px',
+            }}>
+              Enjoy stunning sunset views over Chania's bay at Kokomo, a luxurious villa designed for relaxation.
+              <br/> Perched high above the Cretan coast, this brand new villa sleeps up to 6 guests and features 3 double bedrooms, a large heated private pool, and an outdoor dining area with a BBQ. 
+              <br/>With balconies and terraces showcasing panoramic views, the villa also offers a spacious open-plan kitchen, dining, and lounge area. 
+              <br/>Fully furnished with 5-star amenities, it's the perfect base to explore Western Crete's beautiful beaches or simply unwind and admire the sea and mountain vistas.
+              <br/> License Number: 00001460240.
+            </div>}
           price={
             <div style={{
               marginTop: '10px',
               fontSize: '18px',
               fontWeight: 'bold',
             }}>
-              1300€/day
+               Price Per Week: <br/>April: 3100€ | May: 3300€ | June: 4500€ | July-August: 5850€ | September: 4500€ | October: 3300€ 
             </div>
           }
-          photos={[]} // Add an array of photos
+          photos={[koko1,koko2,koko3,koko4,koko5,koko6,koko7,koko8,koko9,koko10,koko11,koko12,koko13,koko14,koko15,koko16,koko17,koko18,koko19,koko20,koko21,
+            koko22,koko23,koko24,koko25,koko26,koko27,koko28,koko29]} // Add an array of photos
         />
       </div>
     </section>

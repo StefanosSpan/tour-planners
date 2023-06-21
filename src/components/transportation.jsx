@@ -3,6 +3,7 @@ import Card from './Card';
 import Mercedes from '../assets/vip1.png';
 import Mercedes2 from '../assets/vip2.png';
 import Mercedes3 from '../assets/vip3.png';
+import Mercedes4 from '../assets/vip4.jpg';
 
 const Transportation = () => {
   return (
@@ -36,11 +37,11 @@ const Transportation = () => {
 
         />
         <Card
-          bgUrl={Mercedes2}
+          bgUrl={Mercedes4}
           title="Mercedes Benz Sprinter 2019 Limo Edition"
           price="Ask for price"
           area=""
-          photos={[ Mercedes2 ]}
+          photos={[ Mercedes4 ]}
 
         />
       </div>
