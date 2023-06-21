@@ -930,7 +930,7 @@ textarea {
   height: 90%;
   padding: 20px;
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 5px;
   overflow-y: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   border: none;

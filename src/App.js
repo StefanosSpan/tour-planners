@@ -69,7 +69,6 @@ function App() {
         <ExploreSection />
         <Transportation />
         <Personaltrainer />
-        <OtherServicesPage />
         <Footer />
         
         <button className={`scroll-button ${showScrollButton ? 'show' : ''}`} onClick={scrollToTop}>

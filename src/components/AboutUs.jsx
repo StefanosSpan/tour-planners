@@ -63,7 +63,9 @@ const AboutUs = () => {
             <li>Boat Rentals</li>
             <li>Transportation Services</li>
             <li>Personal Trainer & Chef</li>
+            <li>Car Rental</li>
             <li>Concierge Servicers</li>
+            
             {/* Add more services as needed */}
           </ul>
         </section>

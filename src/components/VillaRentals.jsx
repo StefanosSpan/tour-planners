@@ -281,7 +281,6 @@ Immerse yourself in the epitome of relaxation, surrounded by nature's beauty, at
               fontWeight: 'bold',
             }}>
                Price Per Week: <br/> June: 6800€ | July-August: 8500€ | September: 6800€
-               <br/> Price Per Day: <br/> June: 972€ | July-August: 1215€ | September: 972€ 
             </div>
           }
           photos = {[
@@ -327,6 +326,7 @@ Immerse yourself in the epitome of relaxation, surrounded by nature's beauty, at
             image45,
             image46
           ]}
+          
            // Add an array of photos
         />
         <Card
