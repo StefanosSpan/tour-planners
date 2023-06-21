@@ -233,6 +233,7 @@ const VillaRentals = () => {
           }
         />
       </div>
+      <br/>
 
       <div className="card-gallery">
         <Card
@@ -288,7 +289,7 @@ Immerse yourself in the epitome of relaxation, surrounded by nature's beauty, at
            // Add an array of photos
         />
       </div>
-      
+      <br/>
       <div className="card-gallery">
         <Card
           bgUrl={image1}
