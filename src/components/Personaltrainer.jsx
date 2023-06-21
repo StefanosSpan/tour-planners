@@ -30,7 +30,7 @@ const Personaltrainer = () => {
             borderRadius: '5px',
           }}>"Personal training services in a personal space or in a gym. To improve physical condition and relaxation. 
           The goal is the costumer's pleasure and the achievement of his goals. Book your appointment now for an exclusive personal training experience." </div> }
-          photos={[trainer1]} // Add an array of photos
+          photos={[personaltrainerphoto]} // Add an array of photos
         />
         <Card
           bgUrl={privatechef}
