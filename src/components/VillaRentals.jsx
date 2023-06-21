@@ -153,6 +153,8 @@ import koko29 from '../images/villa kokomo/29.jpeg';
 // Add more imports if needed
 
 
+
+
 const VillaRentals = () => {
   return (
     <section id="villarentals">
