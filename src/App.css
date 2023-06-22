@@ -426,7 +426,7 @@ footer {
 
 footer p {
   font-size: 1.5rem;
-  color: white;
+  color: black;
 }
 
 footer #logo {
@@ -435,7 +435,7 @@ footer #logo {
 }
 
 footer a {
-  color: rgb(255, 255, 255);
+  color: black;
   margin-right: 16rem;
   font-weight: 500;
 

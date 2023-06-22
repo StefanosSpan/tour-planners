@@ -16,13 +16,13 @@ const ExploreSection = () => {
         <Card
           bgUrl={boat1}
           title="Boat Rental"
-          price="500€/day"
+          price="Ask For Price"
           photos={[boat1]} // Add an array of photos
         />
         <Card
           bgUrl={boat2}
           title="Boat Rental"
-          price="500€/day"
+          price="Ask For Price"
           photos={[boat2]} // Add an array of photos
         />
         {/* Add more cards here */}
