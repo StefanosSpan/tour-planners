@@ -26,9 +26,9 @@ const Footer = () => {
         </span>
       </div>
       <div className="footer-details">
-        <p>123 Main Street, City</p>
-        <p>Phone: 123-456-7890</p>
-        <p>Email: info@example.com</p>
+        <p>Leof. Kon/nou Karamanli 94, Chania Crete</p>
+        <p>Phone: +306936476703</p>
+        <p>Email: spanoudakis.stf@gmail.com</p>
       </div>
     </footer>
   );
