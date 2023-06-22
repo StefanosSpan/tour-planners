@@ -14,7 +14,6 @@ const Footer = () => {
         <p>All rights reserved</p>
       </div>
       <div className="links">
-        <a href="#AboutUs">About us</a>
         <span className="icon-container">
           <img src={facebookIcon} alt="Facebook Icon" onClick={() => window.open('https://www.facebook.com/your-facebook-page-url', '_blank')} />
         </span>
