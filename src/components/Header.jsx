@@ -13,7 +13,6 @@ import bgImage8 from '../assets/bg/bg8.webp';
 import bgImage9 from '../assets/bg/bg9.jpeg';
 import bgImage10 from '../assets/bg/bg10.webp';
 import bgImage11 from '../assets/bg/bg11.webp';
-import bgImage12 from '../assets/bg/bg12.webp';
 
 
 
@@ -30,7 +29,7 @@ const Header = () => {
   };
 
   const bgImages = [
-    bgImage, bgImage3, bgImage2, bgImage4, bgImage5, bgImage6, bgImage7, bgImage8, bgImage9,bgImage10,bgImage11,bgImage12
+    bgImage, bgImage3, bgImage2, bgImage4, bgImage5, bgImage6, bgImage7, bgImage8, bgImage9,bgImage10,bgImage11
   ];
 
   useEffect(() => {
