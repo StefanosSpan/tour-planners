@@ -15,7 +15,7 @@ const Privatechef = () => {
       <div className="card-gallery">
         <Card
           bgUrl={privatechef}
-          title="Anthimos Tachtsidis - Private Chef"
+          title="Private Chef"
           price={
             <div style={{
               marginTop: '10px',
@@ -28,9 +28,9 @@ const Privatechef = () => {
             background: 'lightgray',
             padding: '10px',
             borderRadius: '5px',
-          }}>"Anthimos Tachtsidis: Your Exquisite Private Chef
+          }}>"Exquisite Private Chef"
 
-          Experience culinary excellence with Anthimos Tachtsidis, an accomplished private chef. With a distinguished background in renowned restaurants, prestigious hotels, and exclusive catering services, Anthimos brings unmatched artistry to your table. Fluent in Greek and English, his diverse skills ensure a memorable gastronomic experience. From sous chef to executive chef, Anthimos is skilled in saucier techniques, baking, and wine pairing. Elevate your dining with Anthimos, a true culinary maestro." </div> }
+          Experience culinary excellence with our Private Chef, an accomplished private chef. With a distinguished background in renowned restaurants, prestigious hotels, and exclusive catering services, our Chef brings unmatched artistry to your table. Fluent in Greek and English, his diverse skills ensure a memorable gastronomic experience. From sous chef to executive chef, our Chef is skilled in saucier techniques, baking, and wine pairing. Elevate your dining with a true culinary maestro." </div> }
           photos={[privatechef]} // Add an array of photos
         />
         {/* Add more cards here */}
