@@ -466,15 +466,15 @@ footer .btn {
     margin-right: 3rem;
     margin-top: -2rem;
     font-size: 13px;
-    
   }
+  
   .carousel .slide img {
     width: 60% !important;
-   }
-   
-   .carousel img {
-     width: 60% !important;
-   }
+  }
+  
+  .carousel img {
+    width: 60% !important;
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -486,7 +486,7 @@ footer .btn {
   .content-wrapper {
     display: block;
     flex-wrap: wrap;
-   }
+  }
   .links a {
     margin-right: 3rem;
     margin-top: 1rem;
@@ -508,9 +508,8 @@ footer .btn {
   }
 
   .content-wrapper {
-    
     flex-wrap: wrap;
-   }
+  }
 
   a {
     margin: 0;
@@ -529,40 +528,33 @@ footer .btn {
     display: none;
   }
 
-  @media screen and (max-width: 880px) {
-    nav .links.show {
-      align-items: center;
-      position: absolute;
-      display: flex;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: auto;
-      flex-direction: column;
-      background-color: #333; /* Update the background color to match your website's design */
-      padding: 20px; /* Add padding for spacing */
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow for depth */
-    }
-  
-    nav .links.show a {
-      margin-bottom: 10px; /* Add margin between navigation links */
-      color: #fff; /* Update the default link color */
-      text-decoration: none; /* Remove the underline */
-      font-size: 18px; /* Adjust the font size */
-    }
-  
-    nav .links.show a:active,
-    nav .links.show a:focus,
-    nav .links.show a:hover {
-      color: #000; /* Set the text color to black for active, focus, and hover states */
-    }
+  nav .links.show {
+    align-items: center;
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    background-color: #333; /* Update the background color to match your website's design */
+    padding: 20px; /* Add padding for spacing */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow for depth */
   }
-  
-  .content-wrapper {
-    
-    flex-wrap: wrap;
-   }
-  
+
+  nav .links.show a {
+    margin-bottom: 10px; /* Add margin between navigation links */
+    color: #fff; /* Update the default link color */
+    text-decoration: none; /* Remove the underline */
+    font-size: 18px; /* Adjust the font size */
+  }
+
+  nav .links.show a:active,
+  nav .links.show a:focus,
+  nav .links.show a:hover {
+    color: #000; /* Set the text color to black for active, focus, and hover states */
+  }
+
   #menu {
     display: inline;
   }
@@ -570,8 +562,6 @@ footer .btn {
   #logo {
     width: 50%;
   }
-
-  
 
   .form-input,
   .btn-search {
@@ -623,12 +613,11 @@ footer .btn {
   }
 
   #explore {
-    height: 70vh;
-
+    height: 150vh;
   }
 
   #transportation {
-    height: 130vh;
+    height: 300vh;
   }
 
   #villarentals {
@@ -636,7 +625,7 @@ footer .btn {
   }
 
   #Personaltrainer {
-    height: 70vh;
+    height: 150vh;
   }
 
   footer {
@@ -677,59 +666,62 @@ footer .btn {
   footer #logo {
     height: 100%;
   }
+
   .form-container,
   .card-gallery {
     flex-direction: column;
     padding: 2rem 0.5rem;
     gap: 0.5rem;
+    height: 60rem;
   }
-
 }
-
-.content-wrapper {
-    
-  flex-wrap: wrap;
- }
 
 @media screen and (max-width: 550px) {
   #villarentals {
-    height: 325vh;
+    height: 405vh;
   }
 }
-
-.content-wrapper {
-    
-  flex-wrap: wrap;
- }
 
 @media screen and (max-width: 480px) {
   #explore {
     height: 140vh;
   }
+
   #villarentals {
     height: 370vh;
   }
+
   #Personaltrainer {
     height: 140vh;
   }
+
   #transportation {
     height: 260vh;
   }
+
   .content-wrapper {
-    
     flex-wrap: wrap;
-   }
-  .card-gallery {
-      width: 85vw;
-      height: 120vh;
-     
   }
+
+  .card-gallery {
+    width: 85vw;
+    height: 120vh;
+  }
+
   .container {
     width: 100%;
   }
 }
 
+.content-wrapper {
+    
+  flex-wrap: wrap;
+ }
 
+ .content-wrapper {
+    
+  flex-wrap: wrap;
+ }
 
 
 .dropdown-content {
