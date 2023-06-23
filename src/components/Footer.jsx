@@ -21,7 +21,7 @@ const Footer = () => {
           <img src={instagramIcon} alt="Instagram Icon" onClick={() => window.open('https://www.instagram.com/your-instagram-page-url', '_blank')} />
         </span>
         <span className="icon-container">
-          <img src={YouTubeIcon} alt="YouTube Icon" onClick={() => window.open('https://www.youtube.com/your-youtube-page-url', '_blank')} />
+          <img src={YouTubeIcon} alt="YouTube Icon" onClick={() => window.open('https://www.youtube.com/@CreteTourPlanners', '_blank')} />
         </span>
       </div>
       <div className="footer-details">
