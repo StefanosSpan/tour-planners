@@ -9,9 +9,9 @@ const Footer = () => {
     <footer>
       <div>
         <img id="logo" src={blackLogo} alt="Company Logo" />
-        <p>© 2021 Tour Planners</p>
+        <p>© 2023 Tour Planners</p>
         <br />
-        <p>All rights reserved</p>
+        <p></p>
       </div>
       <div className="links">
         <span className="icon-container">
