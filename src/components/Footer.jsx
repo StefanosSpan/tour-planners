@@ -14,11 +14,9 @@ const Footer = () => {
         <p></p>
       </div>
       <div className="links">
+        
         <span className="icon-container">
-          <img src={facebookIcon} alt="Facebook Icon" onClick={() => window.open('https://www.facebook.com/your-facebook-page-url', '_blank')} />
-        </span>
-        <span className="icon-container">
-          <img src={instagramIcon} alt="Instagram Icon" onClick={() => window.open('https://www.instagram.com/your-instagram-page-url', '_blank')} />
+          <img src={instagramIcon} alt="Instagram Icon" onClick={() => window.open('https://www.instagram.com/cretetourplanners/', '_blank')} />
         </span>
         <span className="icon-container">
           <img src={YouTubeIcon} alt="YouTube Icon" onClick={() => window.open('https://www.youtube.com/@CreteTourPlanners', '_blank')} />
