@@ -1034,13 +1034,13 @@ h2 {
 
 .btn-close {
   position: fixed;
-  top: 30px;
+  top: 45px;
   left: 10px;
   background-color: #f44336;
   color: #ffffff00;
   border: none;
   padding: 8px 16px;
-  font-size: 15px;
+  font-size: 10px;
   border-radius: 10px;
   cursor: pointer;
   z-index: 9999999;
