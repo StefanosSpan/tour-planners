@@ -27,7 +27,7 @@ const Footer = () => {
       <div className="footer-details">
         <p>Leof. Kon/nou Karamanli 94, Chania Crete</p>
         <p>Phone: +306936476703</p>
-        <p>Email: spanoudakis.stf@gmail.com</p>
+        <p>Email: cretetourplanners@gmail.com</p>
       </div>
     </footer>
   );
