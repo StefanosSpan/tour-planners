@@ -13,12 +13,14 @@ import bgImage8 from '../assets/bg/bg8.webp';
 import bgImage9 from '../assets/bg/bg9.jpeg';
 import bgImage10 from '../assets/bg/bg10.webp';
 import bgImage11 from '../assets/bg/bg11.webp';
-
+import placeholderImage from '../assets/bg/bg.jpeg';
 
 
 const Header = () => {
   const [showContactForm, setShowContactForm] = useState(false);
   const [currentBgIndex, setCurrentBgIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false); // Track if all images have loaded
+
 
   const toggleMenu = () => {
     document.getElementById('links').classList.toggle('show');
@@ -41,8 +43,30 @@ const Header = () => {
     setCurrentBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length);
   };
 
+  useEffect(() => {
+    const interval = setInterval(changeBackground, 7500);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    // Create an array to store promises for each image load event
+    const imageLoadPromises = bgImages.map((imageSrc) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = imageSrc;
+        img.onload = resolve;
+      });
+    });
+
+    // When all images have loaded, update the state to indicate that the images are loaded
+    Promise.all(imageLoadPromises).then(() => {
+      setImagesLoaded(true);
+    });
+  }, []);
+
+
   return (
-    <header className="sticky-nav" style={{ backgroundImage: `url(${bgImages[currentBgIndex]})` }}>
+    <header className="sticky-nav" style={{ backgroundImage: `url(${imagesLoaded ? bgImages[currentBgIndex] : placeholderImage})` }}>
       <nav>
         <img id="logo" src={logo} alt="Tour Planners Logo" />
         <div id="links" className="links">
