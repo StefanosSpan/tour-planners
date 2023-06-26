@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
+    "env-cmd": "^10.1.0",
     "express": "^4.18.2",
     "nodemailer": "^6.9.3",
     "react": "^17.0.0",
@@ -24,7 +25,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:staging": "env-cmd -f .env.staging npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
